@@ -9,7 +9,6 @@ namespace OnBoardingProject.Data.Entities
         public string TaskName { get; set; }
         public DateTime Deadline { get; set; }
         public TaskState State { get; set; }
-        public Project Project { get; set; }
         public User TaskResponsible { get; set; }
     }
 }

@@ -37,21 +37,24 @@ namespace OnBoardingProject.App_Start
 
 
                 bldr.RegisterInstance(config.CreateMapper())
-                          .As<IMapper>()
-                          .SingleInstance();
-
+                    .As<IMapper>()
+                    .SingleInstance();
 
                 bldr.RegisterType<OnBoardingDbContext>()
-                  .InstancePerRequest();
+                    .InstancePerRequest();
 
                 bldr.RegisterType<CommonRepository>()
                     .As<ICommonRepository>()
                     .InstancePerRequest();
-                
+
                 bldr.RegisterType<UserRepository>()
-                  .As<IUserRepository>()
-                  .InstancePerRequest();
-               
+                    .As<IUserRepository>()
+                    .InstancePerRequest();
+
+                bldr.RegisterType<ProjectRepository>()
+                    .As<IProjectRepository>()
+                    .InstancePerRequest();
+
             }
         }
     }

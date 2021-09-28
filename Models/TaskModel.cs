@@ -23,9 +23,6 @@ namespace OnBoardingProject.Models
         public TaskState State { get; set; } = TaskState.Starting;
 
         [Required]
-        public ProjectModel Project { get; set; }
-
-        [Required]
         public UserModel TaskResponsible { get; set; }
     }
 }

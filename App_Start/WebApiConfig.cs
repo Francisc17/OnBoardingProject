@@ -13,7 +13,6 @@ namespace OnBoardingProject
             // Web API configuration and services
             AutofacConfig.Register();
 
-
             // Web API routes
             config.MapHttpAttributeRoutes();
 

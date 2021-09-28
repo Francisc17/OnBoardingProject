@@ -18,7 +18,6 @@ namespace OnBoardingProject.Models
         [Range(1, int.MaxValue)]
         public int Budget { get; set; }
 
-        [Required]
         public UserModel ProjectManager { get; set; }
 
         public ICollection<TaskModel> Tasks { get; set; }

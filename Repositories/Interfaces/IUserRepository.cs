@@ -12,6 +12,7 @@ namespace OnBoardingProject.Repositories
     {
         void AddUser(User user);
         void DeleteUser(User user);
-        Task<User> GetUserAsync(string email);
+        Task<User> GetUserByEmailAsync(string email);
+        Task<User> GetUserByIdAsync(int id);
     }
 }

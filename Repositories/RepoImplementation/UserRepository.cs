@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,7 +12,7 @@ namespace OnBoardingProject.Repositories.RepoImplementation
     {
 
         /*
-         *  New keyword is doing nothing, just suppress the compiler warning for hide
+         *  New keyword is "doing nothing", just suppress the compiler warning for hide
          *  inheritance member (because this field has tha same name of the field
          *  inherated from base class).
          *  https://www.demo2s.com/csharp/csharp-hiding-inherited-members.html
@@ -28,15 +29,28 @@ namespace OnBoardingProject.Repositories.RepoImplementation
             _context.Users.Add(user);
         }
 
+        //Maybe it won´t be used
         public void DeleteUser(User user)
         {
             _context.Users.Remove(user);
         }
 
-        // TODO: Implement this method. 
-        public Task<User> GetUserAsync(string email)
+        public async Task<User> GetUserByEmailAsync(string email)
         {
-            throw new NotImplementedException();
+            IQueryable<User> query = _context.Users;
+
+            query = query.Where(u => u.Email == email);
+
+            return await query.FirstOrDefaultAsync();
+        }
+
+        public async Task<User> GetUserByIdAsync(int id)
+        {
+            IQueryable<User> query = _context.Users;
+
+            query = query.Where(u => u.Id == id);
+
+            return await query.FirstOrDefaultAsync();
         }
     }
 }

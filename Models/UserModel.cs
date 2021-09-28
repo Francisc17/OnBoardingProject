@@ -10,6 +10,8 @@ namespace OnBoardingProject.Models
 {
     public class UserModel
     {
+        public int Id { get; set; }
+
         [Required]
         [StringLength(30, MinimumLength = 3)]
         public string Username { get; set; }
@@ -22,7 +24,6 @@ namespace OnBoardingProject.Models
         [StringLength(30, MinimumLength = 8)]
         public string Password { get; set; }
 
-        //i need to test this
         [RegularExpression("(9[1236][0-9]) ?([0-9]{3}) ?([0-9]{3})", 
             ErrorMessage = "Invalid Mobile Number.")]
         public int PhoneNumber { get; set; }

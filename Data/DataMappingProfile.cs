@@ -13,9 +13,15 @@ namespace OnBoardingProject.Data
     {
         public DataMappingProfile()
         {
-            CreateMap<User, UserModel>().ReverseMap();
+            // we do not need to send user password (and we should not send it!)
+            CreateMap<User, UserModel>()
+                .ForMember(p => p.Password, opt => opt.Ignore())
+                .ReverseMap();
+
             CreateMap<Project, ProjectModel>().ReverseMap();
-            CreateMap<Entities.Task, TaskModel>().ReverseMap();
+
+            CreateMap<Entities.Task, TaskModel>()
+                .ReverseMap();
         }
     }
 }
