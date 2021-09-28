@@ -8,6 +8,6 @@ namespace OnBoardingProject.Repositories.Interfaces
 {
     public interface ICommonRepository
     {
-        
+        Task<bool> SaveChangesAsync();
     }
 }
