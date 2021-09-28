@@ -23,7 +23,8 @@ namespace OnBoardingProject.Models
         public string Password { get; set; }
 
         //i need to test this
-        [Phone]
+        [RegularExpression("(9[1236][0-9]) ?([0-9]{3}) ?([0-9]{3})", 
+            ErrorMessage = "Invalid Mobile Number.")]
         public int PhoneNumber { get; set; }
 
         [Required]

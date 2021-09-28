@@ -3,7 +3,11 @@ using System.Web.Http;
 using Autofac;
 using Autofac.Integration.WebApi;
 using AutoMapper;
+using OnBoardingProject.Data;
 using OnBoardingProject.Data.Entities;
+using OnBoardingProject.Repositories;
+using OnBoardingProject.Repositories.Interfaces;
+using OnBoardingProject.Repositories.RepoImplementation;
 
 namespace OnBoardingProject.App_Start
 {
@@ -25,26 +29,28 @@ namespace OnBoardingProject.App_Start
 
             private static void RegisterServices(ContainerBuilder bldr)
             {
-                /*
+
                 var config = new MapperConfiguration(cfg =>
                 {
-                    cfg.AddProfile(new CampMappingProfile());
+                    cfg.AddProfile(new DataMappingProfile());
                 });
-                
+
 
                 bldr.RegisterInstance(config.CreateMapper())
                           .As<IMapper>()
                           .SingleInstance();
-                */
+
 
                 bldr.RegisterType<OnBoardingDbContext>()
                   .InstancePerRequest();
 
-                /*
-                bldr.RegisterType<CampRepository>()
-                  .As<ICampRepository>()
+                bldr.RegisterType<CommonRepository>()
+                    .As<ICommonRepository>()
+                    .InstancePerRequest();
+                
+                bldr.RegisterType<UserRepository>()
+                  .As<IUserRepository>()
                   .InstancePerRequest();
-                */
                
             }
         }
