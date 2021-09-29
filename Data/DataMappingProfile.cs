@@ -18,7 +18,8 @@ namespace OnBoardingProject.Data
                 .ForMember(p => p.Password, opt => opt.Ignore())
                 .ReverseMap();
 
-            CreateMap<Project, ProjectModel>().ReverseMap();
+            CreateMap<Project, ProjectModel>().ReverseMap()
+                .ForMember(p => p.ProjectManager, opt => opt.Ignore());
 
             CreateMap<Entities.Task, TaskModel>()
                 .ReverseMap();

@@ -118,5 +118,30 @@ namespace OnBoardingProject.Controllers
             }
         }
 
+        [Route("{projectId:int}")]
+        public async Task<IHttpActionResult> Put(int id, int projectId, ProjectModel model)
+        {
+            try
+            {
+                var result = await _repository.GetUserProjectAsync(id, projectId);
+                if (result == null) return NotFound();
+
+                _mapper.Map(model, result);
+
+
+                if (await _repository.SaveChangesAsync())
+                {
+                    return Ok(_mapper.Map<ProjectModel>(result));
+                }
+                else
+                {
+                    return InternalServerError();
+                }
+            }
+            catch (Exception ex)
+            {
+                return InternalServerError(ex);
+            }
+        }
     }
 }

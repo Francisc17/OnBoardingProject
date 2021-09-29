@@ -109,3 +109,9 @@ C:\Users\franc\source\repos\OnBoardingProject\OnBoardingProject\bin\Microsoft.Co
 C:\Users\franc\source\repos\OnBoardingProject\OnBoardingProject\obj\Debug\OnBoardingProject.csproj.CopyComplete
 C:\Users\franc\source\repos\OnBoardingProject\OnBoardingProject\obj\Debug\OnBoardingProject.dll
 C:\Users\franc\source\repos\OnBoardingProject\OnBoardingProject\obj\Debug\OnBoardingProject.pdb
+C:\Users\franc\source\repos\OnBoardingProject\OnBoardingProject\obj\Debug\OnBoardingProject.Data.Migrations.Correction1.resources
+C:\Users\franc\source\repos\OnBoardingProject\OnBoardingProject\obj\Debug\OnBoardingProject.csproj.GenerateResource.cache
+C:\Users\franc\source\repos\OnBoardingProject\OnBoardingProject\obj\Debug\OnBoardingProject.Data.Migrations.Correction2.resources
+C:\Users\franc\source\repos\OnBoardingProject\OnBoardingProject\obj\Debug\OnBoardingProject.Data.Migrations.Correction3.resources
+C:\Users\franc\source\repos\OnBoardingProject\OnBoardingProject\obj\Debug\OnBoardingProject.Data.Migrations.Correction4.resources
+C:\Users\franc\source\repos\OnBoardingProject\OnBoardingProject\obj\Debug\OnBoardingProject.Data.Migrations.Correction5.resources

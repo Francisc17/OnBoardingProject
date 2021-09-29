@@ -24,5 +24,8 @@ namespace OnBoardingProject.Models
 
         [Required]
         public UserModel TaskResponsible { get; set; }
+
+        //include project info ?
+
     }
 }
